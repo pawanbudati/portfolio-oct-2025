@@ -19,17 +19,7 @@ const Navbar = () => {
 
     const itemRefs = useRef(new Map());
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && allowNavbarChange) {
-                if (entry.target.id == "hero") {
-                    setActiveNav("#");
-                } else {
-                    setActiveNav(`#${entry.target.id}`)
-                }
-            }
-        });
-    }, { threshold: 0.35 });
+    const observerRef = useRef(null);
 
     useEffect(() => {
         const activeItemEl = itemRefs.current.get(activeNav);
@@ -56,13 +46,27 @@ const Navbar = () => {
             }, 100);
         }
 
-        itemRefs.current.keys().forEach(key => {
-            if (key == '#') key = '#hero'
-            const target = document.querySelector(key);
+        observerRef.current = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && allowNavbarChange) {
+                    if (entry.target.id === "hero") {
+                        setActiveNav("#");
+                    } else {
+                        setActiveNav(`#${entry.target.id}`)
+                    }
+                }
+            });
+        }, { threshold: 0.35 });
+
+        itemRefs.current.forEach((_, key) => {
+            const selector = key === '#' ? '#hero' : key;
+            const target = document.querySelector(selector);
             if (target) {
-                observer.observe(target)
+                observerRef.current.observe(target)
             }
-        })
+        });
+
+        return () => observerRef.current?.disconnect();
     }, []);
 
     return (

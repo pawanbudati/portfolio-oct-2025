@@ -9,15 +9,19 @@ function Footer() {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <p className="text-sm">
-            © Developer Portfolio by <a target="_blank" href="https://www.linkedin.com/in/pavanbudati/" 
-            className="text-[#16f2b3]">
-            Pavan Budati
+            © Developer Portfolio by{" "}
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/pavanbudati/"
+              className="text-[#16f2b3]"
+            >
+              Pavan Budati
             </a>
           </p>
         </div>
       </div>
-    </div >
+    </div>
   );
-};
+}
 
 export default Footer;

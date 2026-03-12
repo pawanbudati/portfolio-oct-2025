@@ -1,7 +1,7 @@
 export const contactsData = {
-    email: 'pawanbudati@gmail.com',
+    email: 'pawan1122143@gmail.com',
     phone: '+919154899219',
-    address: 'Whitefield, Bangalore - 560067',
+    address: 'Hyderabad, India',
     github: 'https://github.com/pawanbudati',
     linkedIn: 'https://www.linkedin.com/in/pavanbudati/',
     twitter: 'https://twitter.com/pawanbudati',

@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react'
-import NotFound from './components/NotFound/NotFound'
-import { BrowserRouter, Routes, Route  } from 'react-router-dom'
+import { useEffect } from 'react'
 import Footer from './components/Footer/Footer'
 import About from './components/About/About'
 import Hero from './components/Hero/Hero'
@@ -11,14 +9,12 @@ import Experience from './components/Experience/Experience'
 import Skills from './components/Skills/Skills'
 import Projects from './components/Projects/Projects'
 import Header from './components/Header/Header'
-import Education from './components/Education/Education'
 import Contact from './components/Contact/Contact'
 
 function App() {
 
   useEffect(() => {
-    document.title = "Pavan Budati - Software Developer Portfolio",
-    document.description = "This is the portfolio of Pavan Budati. I am a full stack developer and a self taught developer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges."
+    document.title = "Pavan Budati | Java Full Stack Consultant"
   }, [])
   
 

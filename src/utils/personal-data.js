@@ -1,15 +1,15 @@
-import { profile } from "./images";
+import { profile, resumePdf } from "./images";
 
 export const personalData = {
   name: "Pavan Budati",
   profile: profile,
-  designation: "Software Developer",
-  description: "My name is Pavan Kumar Budati. I am a professional and enthusiastic programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love almost all the stacks of web application development and love to make the web more open to the world. My core skills are based on Java and JavaScript. I am available for any kind of job opportunity that suits my skills and interests.",
-  email: 'pawanbudati@gmail.com',
+  designation: "Java Full Stack Consultant",
+  description: "Java full stack consultant (3+ years) specializing in Spring Boot microservices, secure REST APIs, and React frontends. Deep experience with performance tuning, distributed messaging, and delivery in regulated domains (healthcare, banking, logistics, automotive). Passionate about pairing solid engineering practices with pragmatic GenAI tooling to ship faster without sacrificing quality.",
+  email: 'pawan1122143@gmail.com',
   phone: '+91 9154899219',
-  address: 'Whitefield, Bangalore - 560067',
+  address: 'Hyderabad, India',
   github: 'https://github.com/pawanbudati',
   linkedIn: 'https://www.linkedin.com/in/pavanbudati/',
   twitter: 'https://twitter.com/pawanbudati',
-  resume: "https://pawanbudati.github.io/resume/"
+  resume: resumePdf
 }
